@@ -1,27 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NYT-App</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel"stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-10">
-                <div class="jumbotron"></div>
-                <div class="panel panel-header"></div>
-                <input type="text" id="begin-input"><br>
+                <div class="jumbotron">
+                    <h1 id="header"><center><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> New York Times Search</h1></center></div>
+                <div class="panel panel-default">
+                    <div class="panel panel-body top">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Parameters
+                    </div>
+                    <div class="panel panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="input1">Search Term</label>
+                                <input type="term" class="form-control" id="input1" placeholder="Search Term">
+                            </div>
+                            <div class="form-group">
+                                    <label for="input2">Number of Records...</label>
+                                    <input type="number" class="form-control" id="input2" placeholder="Number of Records">
+                            </div>
+                            <div class="form-group">
+                                    <label for="input3">Start Year</label>
+                                    <input type="year" class="form-control" id="input3" placeholder="Start Year">
+                            </div>
+                            <div class="form-group">
+                                    <label for="input4">End Year</label>
+                                    <input type="year" class="form-control" id="input4" placeholder="End Year">
+                            </div>
+                            <div class="buttons">
+                                <button id="search" class="btn btn-lg btn-default btn-body">Search</button>
+                                <button id="clear" class="btn btn-lg btn-default btn-body">Clear Records</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-                <!-- Button triggers new movie to be added -->
-                <input id="begin" type="submit" value="Add a Movie Bro">
-            </div>
-            <div class="col-md-1">
-
+                <div class="panel panel-default">
+                    <div class="panel panel-body top">
+                                <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> Top Articles
+                    </div>
+                    <div class="panel panel-body">
+                           <div class="articles"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -29,4 +64,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>
