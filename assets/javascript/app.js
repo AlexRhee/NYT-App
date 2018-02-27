@@ -3,7 +3,8 @@ $(document).ready(function () {
   var NYtimes = "&fq=The+New+York+Times";
   var begin = "&begin_date=";
   var end = "&end_date=";
-  var term = "q=";
+  var term = "&q=";
+  var count = 0;
   queryUrl += NYtimes;
   //queryUrl+= end;
   function callAjax(Url) {
@@ -15,11 +16,18 @@ $(document).ready(function () {
     });
   }
 
-  $("#begin").on("click",function (event) {
+  $("#search").on("click",function (event) {
     event.preventDefault();
-    var beginDate = $("#begin-input").val().trim();
+    var searchTerm = $("#input1").val().trim();
+    term += searchTerm;
+    queryUrl += term;
+    count = $("#input2").val().trim();
+    var beginDate = $("#input3").val().trim();
     begin += beginDate;
     queryUrl += begin;
+    var endDate = $("#input4").val().trim();
+    end += endDate;
+    queryUrl += end;
     console.log(queryUrl);
     callAjax(queryUrl);
   });
