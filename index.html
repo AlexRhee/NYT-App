@@ -8,7 +8,8 @@
     <title>NYT-App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
-    <link rel "stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=UnifrakturMaguntia" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,34 +18,43 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <div class="jumbotron">
-                    <h1><center><span class="glyphicon glyphicon-globe"></span> New York Times Search</h1></center></div>
+                    <h1 id="header"><center><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> New York Times Search</h1></center></div>
                 <div class="panel panel-default">
                     <div class="panel panel-heading">
-                        <span class="glyphicon glyphicon-globe"></span> Search Parameters
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search Parameters
                     </div>
                     <div class="panel panel-body">
                         <form>
                             <div class="form-group">
-                                <label for="input1">First Paramenter</label>
-                                <input type="email" class="form-control" id="input1" placeholder="First">
+                                <label for="input1">Search Term</label>
+                                <input type="term" class="form-control" id="input1" placeholder="Search Term">
                             </div>
                             <div class="form-group">
-                                    <label for="input2">Second Paramenter</label>
-                                    <input type="email" class="form-control" id="input2" placeholder="Second">
+                                    <label for="input2">Number of Records...</label>
+                                    <input type="number" class="form-control" id="input2" placeholder="Number of Records">
                             </div>
                             <div class="form-group">
-                                    <label for="input3">Third Paramenter</label>
-                                    <input type="email" class="form-control" id="input3" placeholder="Third">
+                                    <label for="input3">Start Year</label>
+                                    <input type="year" class="form-control" id="input3" placeholder="Start Year">
                             </div>
                             <div class="form-group">
-                                    <label for="input4">Fourth Paramenter</label>
-                                    <input type="email" class="form-control" id="input4" placeholder="Fourth">
+                                    <label for="input4">End Year</label>
+                                    <input type="year" class="form-control" id="input4" placeholder="End Year">
                             </div>
                             <div class="buttons">
-                                <button id="search" class="btn btn-lg btn-primary">Search</button>
-                                <button id="clear" class="btn btn-lg btn-primary">Clear Records</button>
+                                <button id="search" class="btn btn-lg btn-default btn-body">Search</button>
+                                <button id="clear" class="btn btn-lg btn-default btn-body">Clear Records</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                                <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span> Top Articles
+                    </div>
+                    <div class="panel panel-body">
+                           <div class="articles"></div>
                     </div>
                 </div>
             </div>
